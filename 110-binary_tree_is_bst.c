@@ -3,19 +3,19 @@
 /**
  * is_valid_bst_util - Utility function to recursively
  * check if a binary tree is a valid BST
- * @root: Pointer to the root of the binary tree
+ * @tree: Pointer to the root of the binary tree
  * @min: Minimum allowed value for nodes in the subtree rooted at @root
  * @max: Maximum allowed value for nodes in the subtree rooted at @root
  * Return: true if the tree rooted at @root is a valid BST, false otherwise
  */
-bool is_valid_bst_util(const binary_tree_t *root, int min, int max)
+bool is_valid_bst_util(const binary_tree_t *tree, int min, int max)
 {
 	if (tree == NULL)
 		return (true);
 	if (tree->n <= min || tree->n >= max)
 		return (false);
-	return (is_valid_bst_util(root->left, min, root->n) &&
-		is_valid_bst_util(root->right, root->n, max));
+	return (is_valid_bst_util(tree->left, min, tree->n) &&
+		is_valid_bst_util(tree->right, tree->n, max));
 }
 
 /**
