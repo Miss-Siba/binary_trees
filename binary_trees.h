@@ -48,5 +48,6 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
-
+bool is_valid_bst_util(const binary_tree_t *root, int min, int max);
+int binary_tree_is_bst(const binary_tree_t *tree);
 #endif
